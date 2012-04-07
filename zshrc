@@ -28,7 +28,7 @@ ZSH_THEME="geoffgarside"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx github ruby gem node npm symfony2 brew git-flow)
+plugins=(git archlinux ssh-agent python github ruby gem node npm symfony2 brew git-flow)
 #plugins=(git symfony2)
 source $ZSH/oh-my-zsh.sh
 
