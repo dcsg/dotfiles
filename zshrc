@@ -1,7 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
 
-PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/local/Cellar/php/5.3.8/bin:/usr/local/mongodb/bin:$PATH
-PATH=$PATH:/usr/local/Sahi/userdata/bin
+PATH=/usr/local/bin:$PATH
+
 export ZSH=$HOME/.oh-my-zsh
 
 HISTFILE=~/.histfile
@@ -24,6 +24,6 @@ DISABLE_LS_COLORS="false"
 # DISABLE_AUTO_TITLE="true"
 # DISABLE_COMPLETION_WAITING_DOTS="true"
 
-plugins=(git osx github ruby gem node npm symfony2 brew git-flow)
+plugins=(git vagrant github ruby gem node npm symfony2 brew git-flow)
 
 source $ZSH/oh-my-zsh.sh
