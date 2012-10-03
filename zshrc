@@ -24,6 +24,6 @@ DISABLE_LS_COLORS="false"
 # DISABLE_AUTO_TITLE="true"
 # DISABLE_COMPLETION_WAITING_DOTS="true"
 
-plugins=(git osx github ruby gem node npm symfony2 brew git-flow)
+plugins=(git osx github ruby gem node npm symfony2 brew git-flow vagrant)
 
 source $ZSH/oh-my-zsh.sh
