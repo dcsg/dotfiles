@@ -26,3 +26,4 @@ Thumbs.db
 *.so
 tags
 _autoload.php
+atlassian-ide-plugin.xml
