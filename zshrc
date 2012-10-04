@@ -16,6 +16,7 @@ alias c="composer"
 alias s="subl"
 alias gdf="git diff"
 alias console="php app/console"
+alias sf2cachelogs="~/dotfiles/sf2cachelogs"
 
 ZSH_THEME="geoffgarside"
 CASE_SENSITIVE="false"
