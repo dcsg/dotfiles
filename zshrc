@@ -1,7 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 
-PATH=/usr/local/mysql/bin:/usr/local/bin:/usr/local/Cellar/php/5.3.8/bin:/usr/local/mongodb/bin:$PATH
-PATH=$PATH:/usr/local/Sahi/userdata/bin
+PATH=/usr/bin:/usr/sbin:/usr/local/mysql/bin:/usr/local/bin:/usr/local/mongodb/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 
 HISTFILE=~/.histfile
