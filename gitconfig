@@ -1,5 +1,31 @@
 [user]
 	name = Daniel Gomes
 	email = me@danielcsgomes.com
+
 [credential]
 	helper = cache --timeout=3600
+
+[core]
+	ui = true
+	editor = vim
+	autocrlf = false
+	whitespace = trailing-space,space-before-tab
+
+[push]
+	default = current
+
+[color]
+	diff = always
+
+[merge]
+    tool = diffmerge
+
+[mergetool "diffmerge"]
+    cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+    trustExitCode = true
+
+[diff]
+    tool = diffmerge
+
+[difftool "diffmerge"]
+    cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
