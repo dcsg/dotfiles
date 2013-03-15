@@ -13,9 +13,8 @@ export EDITOR=vim
 # alias
 
 alias c="composer"
-alias s="sudo open subl $*"
-alias gdf="git diff"
-alias gdft="git difftoll"
+alias s="subl $1 &"
+alias gdft="git difftool"
 alias console="php app/console"
 alias sf2cachelogs="~/dotfiles/sf2cachelogs"
 
