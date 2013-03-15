@@ -25,10 +25,10 @@ echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
+    echo "Moving file $file from ~ to $olddir"
     mv -f ~/.$file ~/dotfiles_old/
     echo "Copying $file to home directory."
-    cp -Rf $dir/$file ~/.$file
+    cp -f $dir/$file ~/.$file
 done
 
 for file in $binfiles; do
