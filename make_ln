@@ -39,3 +39,6 @@ done
 
 #add to git config the global ignores
 git config --global core.excludesfile ~/.gitignore_global
+
+#add p4merge symlink
+sudo ln -sf /usr/local/p4merge/bin/p4merge /usr/bin/p4merge
