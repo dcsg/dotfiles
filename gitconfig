@@ -25,5 +25,5 @@
         prompt = false
         keepbackup = false
 [alias]
-        log-live = git-log-live
+        live-log = git-live-log
         rm-branch = git-branch-delete

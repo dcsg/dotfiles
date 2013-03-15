@@ -9,6 +9,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="gitconfig gitignore_global zshrc mongorc.js"    # list of files/folders to symlink in homedir
+binfiles="git-branch-delete git-live-log"
 
 ##########
 
@@ -28,6 +29,12 @@ for file in $files; do
     mv -f ~/.$file ~/dotfiles_old/
     echo "Copying $file to home directory."
     cp -Rf $dir/$file ~/.$file
+done
+
+for file in $binfiles; do
+    echo "Creating symlinks for bin files"
+    sudo  ln -sf $dir/bin/$file /usr/bin/$file
+    echo "Done symlinks"
 done
 
 #add to git config the global ignores
