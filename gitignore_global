@@ -7,6 +7,8 @@ Icon?
 tags
 _autoload.php
 atlassian-ide-plugin.xml
+.vagrant/
+.vagrant*
 
 # Compiled source #
 ###################
