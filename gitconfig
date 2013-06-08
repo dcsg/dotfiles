@@ -1,5 +1,40 @@
 [user]
 	name = Daniel Gomes
 	email = me@danielcsgomes.com
+
 [credential]
 	helper = osxkeychain
+
+[core]
+        ui = true
+        editor = vim
+        autocrlf = false
+        whitespace = trailing-space,space-before-tab
+        excludesfile = ~/.gitignore_global
+
+[push]
+        default = current
+
+[color]
+        diff = always
+
+[merge]
+	tool = sublime
+
+[mergetool "diffmerge"]
+    cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+    trustExitCode = true
+
+[diff]
+    tool = diffmerge
+
+[difftool "diffmerge"]
+    cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "sublime"]
+	cmd = subl -w $MERGED
+	trustExitCode = false
+
+[alias]
+        live-log = git-live-log
+        rm-branch = git-branch-delete

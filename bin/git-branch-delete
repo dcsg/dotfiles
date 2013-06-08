@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [[ X"" = X"$1" ]]; then 
+	echo "Usage: $0 <branch-name>"
+	exit
+fi
+
+git status > /dev/null 2>&1
+
+if [ "$?" -ne "0" ]; then
+	echo "Not in a git repository"
+	exit
+fi
+
+branch=`git branch | grep $1`
+
+if [[ X"" = X"$branch" ]]; then
+	echo "Branch $1 not found"
+	exit
+fi
+
+git push origin :$1
+git branch -D $1
