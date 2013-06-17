@@ -8,8 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="gitconfig gitignore_global zshrc mongorc.js"    # list of files/folders to symlink in homedir
-binfiles="git-branch-delete git-live-log"
+files="gitconfig gitignore_global zshrc mongorc.js vimrc"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -23,22 +22,18 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
+echo "Symlink the bin files"
+sudo ln -sf $dir/bin/* /usr/local/bin
+
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
-    echo "Moving file $file from ~ to $olddir"
+    echo "Moving any existing dotfiles from ~ to $olddir"
     mv -f ~/.$file ~/dotfiles_old/
     echo "Copying $file to home directory."
-    cp -f $dir/$file ~/.$file
+    cp -Rf $dir/$file ~/.$file
 done
 
-for file in $binfiles; do
-    echo "Creating symlinks for bin files"
-    sudo  ln -sf $dir/bin/$file /usr/bin/$file
-    echo "Done symlinks"
-done
+echo "If it's a fresh OS installation don't forget to install fonts."
 
 #add to git config the global ignores
 git config --global core.excludesfile ~/.gitignore_global
-
-#add p4merge symlink
-sudo ln -sf /usr/local/p4merge/bin/p4merge /usr/bin/p4merge
