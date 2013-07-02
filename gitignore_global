@@ -9,6 +9,10 @@ _autoload.php
 atlassian-ide-plugin.xml
 .vagrant/
 
+# Idea IDE's #
+##############
+drivers/
+
 # Compiled source #
 ###################
 *.com

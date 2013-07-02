@@ -20,9 +20,9 @@ DISABLE_UPDATE_PROMPT=true
 # Uncomment following line if you want to disable command autocorrection
 # DISABLE_CORRECTION="true"
 
-COMPLETION_WAITING_DOTS="true"
+#COMPLETION_WAITING_DOTS="true"
 
-plugins=(git osx github ruby gem node npm symfony2 brew git-flow vagrant themes extract sublime rsync redis-cli colorize)
+plugins=(git osx github ruby gem node npm symfony2 brew git-flow vagrant themes extract sublime rsync redis-cli colorize battery)
 
 source $ZSH/oh-my-zsh.sh
 
