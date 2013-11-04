@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/local/bin/pygmentize -f rtf -O "style=default,fontface=Anonymous Pro Minus" "$1" | pbcopy
+/usr/local/bin/pygmentize -f rtf -O "style=autumn,fontface=Ubuntu Mono" "$1" | pbcopy
