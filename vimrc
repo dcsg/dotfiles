@@ -10,6 +10,14 @@ set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set noshowmode
 
+" NERD Tree configuration
+" open a NERDTree automatically when vim starts up if no files were specified
+autocmd vimenter * if !argc() | NERDTree | endif
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" Maps ctrl+n to open NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
 " Define vundle
 set nocompatible
 filetype off
@@ -25,6 +33,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
  
 filetype plugin on
 filetype plugin indent on
