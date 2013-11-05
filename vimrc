@@ -1,5 +1,3 @@
-call pathogen#incubate()
-
 syntax on
 set background=dark
 colorscheme solarized
