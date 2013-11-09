@@ -10,7 +10,7 @@ alias c="composer"
 alias gdf="git diff"
 alias console="php app/console"
 alias l="ls -la"
-alias gti="git log --since=midnight --author='$(git config user.name)' --oneline"
+alias gt="git log --since=midnight --author='$(git config user.name)' --oneline"
 
 # my old theme
 #ZSH_THEME="xiong-chiamiov-plus"
