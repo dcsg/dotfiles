@@ -8,9 +8,10 @@
 [core]
         ui = true
         editor = vim
-        autocrlf = false
-        whitespace = trailing-space,space-before-tab
+        autocrlf = input
+        whitespace = trailing-space,space-before-tab,cr-at-eol
         excludesfile = ~/.gitignore_global
+        attributesfile = ~/.gitattributes
 
 [push]
         default = current
