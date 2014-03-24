@@ -1,6 +1,7 @@
 [user]
 	name = Daniel Gomes
 	email = me@danielcsgomes.com
+	signingkey = 4F98A4AD
 
 [credential]
 	helper = osxkeychain
