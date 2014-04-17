@@ -42,4 +42,4 @@ plugins=(git osx github ruby gem node npm symfony2 brew git-flow vagrant themes 
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/usr/local/git/bin:/usr/bin:/usr/sbin:/usr/local/mysql/bin:/usr/local/bin:/usr/local/mongodb/bin:$PATH
+export PATH=/usr/local/git/bin:/usr/bin:/usr/sbin:/usr/local/mysql/bin:/usr/local/bin:~/.composer/vendor/bin:$PATH
