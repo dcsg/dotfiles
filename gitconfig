@@ -1,6 +1,7 @@
 [user]
 	name = Daniel Gomes
 	email = me@danielcsgomes.com
+	signingkey = 4F98A4AD
 
 [credential]
 	helper = osxkeychain
@@ -8,9 +9,10 @@
 [core]
         ui = true
         editor = vim
-        autocrlf = false
-        whitespace = trailing-space,space-before-tab
+        autocrlf = input
+        whitespace = trailing-space,space-before-tab,cr-at-eol
         excludesfile = ~/.gitignore_global
+        attributesfile = ~/.gitattributes
 
 [push]
         default = current
