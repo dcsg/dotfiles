@@ -7,10 +7,21 @@
 ########## Variables
 
 dir=~/dotfiles                    # dotfiles directory
+local_dir=~/local                 # default local
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="gitconfig gitattributes gitignore_global zshrc mongorc.js vimrc"    # list of files/folders to symlink in homedir
+dirs="$local_dir $local_dir/bin $local_dir/lib $local_dir/share"
 
 ##########
+
+for folder in $dirs; do
+    if [ ! -d $folder ]
+        then
+            echo "Create $folder directory"
+            mkdir -p $folder
+            echo "...done"
+    fi
+done
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
@@ -23,20 +34,37 @@ cd $dir
 echo "...done"
 
 echo "Symlink the bin files"
-sudo ln -sf $dir/bin/* /usr/local/bin
+ln -sf $dir/bin/* $local_dir/bin
 
 echo "Symlink the themes files"
-sudo ln -sf $dir/themes/* ~/.oh-my-zsh/themes/
+ln -sf $dir/themes/* ~/.oh-my-zsh/themes/
+
+if [ ! -d $dir/vim/bundle/vundle ]
+    then
+        echo "initializing git submodules"
+        git submodule update --init
+        echo "...done"
+fi
+
+if [ ! -d ~/.vim/ ]
+    then
+        echo "Creating .vim folder"
+        mkdir -p ~/.vim
+        echo "...done"
+fi
 
 echo "Symlink the vim stuff"
-sudo ln -sf $dir/vim/* ~/.vim/
-	
+ln -sf $dir/vim/* ~/.vim/
+echo "...done"
+
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
     mv -f ~/.$file ~/dotfiles_old/
+    echo "...done"
     echo "Copying $file to home directory."
     cp -Rf $dir/$file ~/.$file
+    echo "...done"
 done
 
 echo "If it's a fresh OS installation don't forget to install fonts."

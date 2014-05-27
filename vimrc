@@ -9,6 +9,11 @@ set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set noshowmode
+set listchars=tab:>-,trail:-
+set list
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " NERD Tree configuration
 " open a NERDTree automatically when vim starts up if no files were specified
