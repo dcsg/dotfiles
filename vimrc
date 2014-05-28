@@ -9,7 +9,7 @@ set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set noshowmode
-set listchars=tab:>-,trail:-
+set listchars=tab:>-,trail:·,eol:¬
 set list
 set tabstop=4
 set shiftwidth=4
@@ -39,16 +39,17 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
- 
+Bundle 'Yggdroot/indentLine'
+
 filetype plugin on
 filetype plugin indent on
 
 " Fix terminal timeout
 if ! has('gui_running')
-	set ttimeoutlen=10
-	augroup FastEscape
-		autocmd!
-		au InsertEnter * set timeoutlen=0
-		au InsertLeave * set timeoutlen=1000
-	augroup END
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
 endif
