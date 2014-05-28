@@ -28,9 +28,11 @@ POWERLINE_GIT_DELETED="%F{red}✖%F{black}"
 POWERLINE_GIT_UNTRACKED="%F{yellow}✭%F{black}"
 POWERLINE_GIT_RENAMED="➜"
 POWERLINE_GIT_UNMERGED="═"
-POWERLINE_HIDE_HOST_NAME=true
+POWERLINE_HIDE_HOST_NAME="true"
+POWERLINE_FULL_CURRENT_PATH="false"
 POWERLINE_RIGHT_A="mixed"
-export UPDATE_ZSH_DAYS=5
+POWERLINE_RIGHT_B="none"
+export UPDATE_ZSH_DAYS=3
 
 DISABLE_UPDATE_PROMPT=true
 
@@ -39,7 +41,7 @@ DISABLE_UPDATE_PROMPT=true
 
 #COMPLETION_WAITING_DOTS="true"
 
-plugins=(git osx github ruby gem node npm symfony2 brew git-flow vagrant themes extract sublime rsync redis-cli colorize battery)
+plugins=(git osx github ruby gem node npm symfony2 brew git-flow vagrant themes extract sublime rsync redis-cli colorize battery vundle github)
 
 source $ZSH/oh-my-zsh.sh
 
