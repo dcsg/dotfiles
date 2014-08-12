@@ -4,13 +4,16 @@ export EDITOR=vim
 
 HISTFILE=~/.histfile
 HISTSIZE=10000
+
 SAVEHIST=10000
 
+autoload -U zmv
+
 alias c="composer"
-alias gdf="git diff"
 alias console="php app/console"
 alias l="ls -la"
 alias gt="git log --since=midnight --author='$(git config user.name)' --format='%Cred%h %Cgreen%s %Creset - %ad' --date=relative"
+alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\" PHP_IDE_CONFIG=\"serverName=localhost\" $1"
 
 # my old theme
 #ZSH_THEME="xiong-chiamiov-plus"
