@@ -6,7 +6,7 @@ export LC_ALL=en_US.UTF-8
 
 HISTFILE=~/.histfile
 HISTSIZE=10000
-
+HIST_STAMPS="yyyy-mm-dd"
 SAVEHIST=10000
 
 autoload -U zmv
