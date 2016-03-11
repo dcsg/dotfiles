@@ -39,6 +39,9 @@ ln -sf $dir/bin/* $local_dir/bin
 echo "Symlink the themes files"
 ln -sf $dir/themes/* ~/.oh-my-zsh/themes/
 
+echo "Symlink the custom files"
+ln -sf $dir/custom/* ~/.oh-my-zsh/custom/
+
 if [ ! -d $dir/vim/bundle/vundle ]
     then
         echo "initializing git submodules"

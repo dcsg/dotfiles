@@ -1,6 +1,8 @@
 ZSH=$HOME/.oh-my-zsh
 
 export EDITOR=vim
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -49,6 +51,6 @@ plugins=(git osx github ruby gem node npm symfony2 brew git-flow vagrant themes 
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/usr/local/git/bin:/usr/bin:/usr/sbin:/usr/local/mysql/bin:~/.composer/vendor/bin:/usr/local/bin:~/local/bin:~/local/node/bin:$PATH
+export PATH=~/.composer/vendor/bin:/usr/local/php5/bin:/usr/local/php7/bin:/usr/local/git/bin:/usr/bin:/usr/sbin:/usr/local/mysql/bin:/usr/local/bin:~/local/bin:~/local/node/bin:$PATH
 
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
