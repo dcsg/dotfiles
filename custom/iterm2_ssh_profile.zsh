@@ -35,10 +35,10 @@ if [[ -n "$ITERM_SESSION_ID" ]]; then
         if [[ "$1" =~ "^ssh " ]]; then
             if [[ "$1" =~ "prod*" ]]; then
                 tabc Production
-                tab-color 43 0 0
+                tab-color 124 0 0
             elif [[ "$*" =~ "staging*" ]]; then
                 tabc Staging
-                tab-color 36 4 46
+                tab-color 110 80 0
             else
                 tabc Other
                 tab-color 8 56 80
