@@ -9,7 +9,7 @@
 dir=~/dotfiles                    # dotfiles directory
 local_dir=~/local                 # default local
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="gitconfig gitattributes gitignore_global zshrc mongorc.js vimrc"    # list of files/folders to symlink in homedir
+files="gitconfig gitattributes gitignore_global zshrc mongorc.js vimrc go"    # list of files/folders to symlink in homedir
 dirs="$local_dir $local_dir/bin $local_dir/lib $local_dir/share"
 
 ##########

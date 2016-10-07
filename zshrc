@@ -51,6 +51,7 @@ plugins=(git osx github ruby gem node npm symfony2 brew git-flow vagrant themes 
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=~/.composer/vendor/bin:/usr/local/php5/bin:/usr/local/php7/bin:/usr/local/git/bin:/usr/bin:/usr/sbin:/usr/local/mysql/bin:/usr/local/bin:~/local/bin:~/local/node/bin:$PATH
+export GOPATH=~/go
+export PATH=~/.composer/vendor/bin:/usr/local/php5/bin:/usr/local/php7/bin:/usr/local/git/bin:/usr/bin:/usr/sbin:/usr/local/mysql/bin:/usr/local/bin:~/local/bin:~/local/node/bin:$GOPATH/bin:$PATH
 
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
