@@ -8,10 +8,13 @@ tags
 _autoload.php
 atlassian-ide-plugin.xml
 .vagrant/
+*.env
 
 # Idea IDE's #
 ##############
 drivers/
+out/
+*.iml
 
 # Compiled source #
 ###################
