@@ -11,11 +11,12 @@ SAVEHIST=10000
 
 autoload -U zmv
 
-alias c="composer"
-alias console="php app/console"
 alias l="ls -la"
 alias gt="git log --since=midnight --author='$(git config user.name)' --format='%Cred%h %Cgreen%s %Creset - %ad' --date=relative"
 alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\" PHP_IDE_CONFIG=\"serverName=localhost\" $1"
+
+# Salesforce PMD
+alias pmd="$HOME/pmd-bin-6.1.0/bin/run.sh pmd"
 
 # my old theme
 #ZSH_THEME="xiong-chiamiov-plus"
@@ -47,12 +48,29 @@ DISABLE_UPDATE_PROMPT=false
 
 #COMPLETION_WAITING_DOTS="true"
 
-plugins=(git osx github ruby gem node npm symfony2 brew git-flow vagrant themes extract sublime rsync redis-cli colorize battery vundle github)
+plugins=(
+    git
+    osx
+    github
+    ruby
+    gem
+    node
+    npm
+    symfony2
+    brew
+    git-flow
+    vagrant
+    themes
+    extract
+    sublime
+    redis-cli
+    colorize
+    battery
+    vundle
+    github
+)
 
 source $ZSH/oh-my-zsh.sh
 
 export GOPATH=~/go
 export PATH=~/.composer/vendor/bin:/usr/local/php5/bin:/usr/local/php7/bin:/usr/local/git/bin:/usr/bin:/usr/sbin:/usr/local/mysql/bin:/usr/local/bin:~/local/bin:~/local/node/bin:$GOPATH/bin:/usr/local/opt/openssl/bin:$PATH
-
-# Salesforce PMD
-alias pmd="$HOME/pmd-bin-6.1.0/bin/run.sh pmd"
