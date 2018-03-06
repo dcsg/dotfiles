@@ -40,7 +40,7 @@ POWERLINE_RIGHT_B="none"
 POWERLINE_DATE_FORMAT="%D %T"
 export UPDATE_ZSH_DAYS=3
 
-DISABLE_UPDATE_PROMPT=true
+DISABLE_UPDATE_PROMPT=false
 
 # Uncomment following line if you want to disable command autocorrection
 # DISABLE_CORRECTION="true"
@@ -52,6 +52,7 @@ plugins=(git osx github ruby gem node npm symfony2 brew git-flow vagrant themes 
 source $ZSH/oh-my-zsh.sh
 
 export GOPATH=~/go
-export PATH=~/.composer/vendor/bin:/usr/local/php5/bin:/usr/local/php7/bin:/usr/local/git/bin:/usr/bin:/usr/sbin:/usr/local/mysql/bin:/usr/local/bin:~/local/bin:~/local/node/bin:$GOPATH/bin:$PATH
+export PATH=~/.composer/vendor/bin:/usr/local/php5/bin:/usr/local/php7/bin:/usr/local/git/bin:/usr/bin:/usr/sbin:/usr/local/mysql/bin:/usr/local/bin:~/local/bin:~/local/node/bin:$GOPATH/bin:/usr/local/opt/openssl/bin:$PATH
 
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+# Salesforce PMD
+alias pmd="$HOME/pmd-bin-6.1.0/bin/run.sh pmd"
