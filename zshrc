@@ -50,6 +50,7 @@ DISABLE_UPDATE_PROMPT=false
 
 plugins=(
     git
+    gitfast
     osx
     github
     ruby
