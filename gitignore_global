@@ -1,7 +1,6 @@
 .rsync_cache
 *~
 *.swp
-.idea
 ehthumbs.db
 Icon?
 tags
@@ -9,12 +8,16 @@ _autoload.php
 atlassian-ide-plugin.xml
 .vagrant/
 *.env
+_private/
+phpunit.xml
 
 # Idea IDE's #
 ##############
 drivers/
 out/
 *.iml
+.idea
+IlluminatedCloud/
 
 # Compiled source #
 ###################
