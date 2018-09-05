@@ -1,18 +1,18 @@
 [user]
-	name = Daniel Gomes
-	email = me@danielcsgomes.com
-	signingkey = 4F98A4AD
+    name = Daniel Gomes
+    email = danielcesargomes@gmail.com
+    signingkey = 4F98A4AD
 
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 
 [core]
-        ui = true
-        editor = vim
-        autocrlf = input
-        whitespace = trailing-space,space-before-tab,cr-at-eol
-        excludesfile = ~/.gitignore_global
-        attributesfile = ~/.gitattributes
+    ui = true
+    editor = vim
+    autocrlf = input
+    whitespace = trailing-space,space-before-tab,cr-at-eol
+    excludesfile = ~/.gitignore_global
+    attributesfile = ~/.gitattributes
 
 [push]
         default = current
@@ -21,7 +21,7 @@
         diff = always
 
 [merge]
-	tool = sublime
+    tool = sublime
 
 [mergetool "diffmerge"]
     cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
@@ -33,10 +33,10 @@
 [difftool "diffmerge"]
     cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 
-[mergetool "sublime"]
-	cmd = subl -w $MERGED
-	trustExitCode = false
-
 [alias]
-        live-log = git-live-log
-        rm-branch = git-branch-delete
+    live-log = git-live-log
+    rm-branch = git-branch-delete
+
+[pager]
+    diff = diff-so-fancy | less --tabs=4 -RFX
+    show = diff-so-fancy | less --tabs=4 -RFX
