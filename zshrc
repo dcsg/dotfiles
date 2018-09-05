@@ -1,19 +1,31 @@
 ZSH=$HOME/.oh-my-zsh
 
+# Exports
 export EDITOR=vim
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
+# Keep track of terminal history
 HISTFILE=~/.histfile
 HISTSIZE=10000
 HIST_STAMPS="yyyy-mm-dd"
+HIST_FORMAT="%Y-%m-%d %T$(echo -e '\t')"
 SAVEHIST=10000
 
 autoload -U zmv
 
+# Alias
 alias l="ls -la"
 alias gt="git log --since=midnight --author='$(git config user.name)' --format='%Cred%h %Cgreen%s %Creset - %ad' --date=relative"
 alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\" PHP_IDE_CONFIG=\"serverName=localhost\" $1"
+alias cat='bat'
+alias ping='prettyping --nolegend'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias top="sudo htop" # alias top and fix high sierra bug
+alias help='tldr'
+alias history='fc -t "$HIST_FORMAT" -il 1'
+alias hist='fc -t "$HIST_FORMAT" -il 1'
 
 # my old theme
 #ZSH_THEME="xiong-chiamiov-plus"

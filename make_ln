@@ -8,9 +8,10 @@
 
 dir=~/dotfiles                    # dotfiles directory
 local_dir=~/local                 # default local
-olddir=~/dotfiles_old             # old dotfiles backup directory
+olddir=~/dotfiles_backup             # old dotfiles backup directory
 files="gitconfig gitattributes gitignore_global zshrc mongorc.js vimrc go"    # list of files/folders to symlink in homedir
 dirs="$local_dir $local_dir/bin $local_dir/lib $local_dir/share"
+brew_packages="bat prettyping fzf htop diff-so-fancy fd tldr jq csvkit"
 
 ##########
 
@@ -74,3 +75,16 @@ echo "If it's a fresh OS installation don't forget to install fonts."
 
 #add to git config the global ignores
 git config --global core.excludesfile ~/.gitignore_global
+
+# Install or update Homebrew
+which -s brew
+if [[ $? != 0 ]] ; then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+    brew update
+fi
+
+brew install $brew_packages
+
+# install fzf key bindigns
+$(brew --prefix)/opt/fzf/install --all
