@@ -15,9 +15,6 @@ alias l="ls -la"
 alias gt="git log --since=midnight --author='$(git config user.name)' --format='%Cred%h %Cgreen%s %Creset - %ad' --date=relative"
 alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\" PHP_IDE_CONFIG=\"serverName=localhost\" $1"
 
-# Salesforce PMD
-alias pmd="$HOME/pmd-bin-6.1.0/bin/run.sh pmd"
-
 # my old theme
 #ZSH_THEME="xiong-chiamiov-plus"
 
