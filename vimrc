@@ -14,6 +14,7 @@ set list
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set rtp+=/usr/local/opt/fzf
 
 " NERD Tree configuration
 " open a NERDTree automatically when vim starts up if no files were specified
@@ -31,7 +32,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My Bundles
