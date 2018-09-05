@@ -88,3 +88,29 @@ brew install $brew_packages
 
 # install fzf key bindigns
 $(brew --prefix)/opt/fzf/install --all
+
+# setup gitconfig basic info
+read -p 'Do you want to setup your git config basic info? (Y/N) ' configurebasicvar
+echo
+if [ "$configurebasicvar" = "y" ] || [ "$configurebasicvar" = "Y"  ]; then
+    read -p 'Name: ' namevar
+    read -p 'Email: ' emailvar
+    read -p 'Signing Key: ' signingkeyvar
+
+    if test -n "$namevar"; then
+        git config --global user.name "$namevar"
+    fi
+
+    if test -n "$emailvar"; then
+        git config --global user.email "$emailvar"
+    fi
+
+    if test -n "$signingkeyvar"; then
+        git config --global user.signingkey "$signingkeyvar"
+    fi
+
+    echo
+    echo "Your git basic configuration"
+    echo
+    git config --global -l | grep user
+fi
