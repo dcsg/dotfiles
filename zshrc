@@ -71,7 +71,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 export GOPATH=~/go
-export PATH=~/.composer/vendor/bin:/usr/local/php5/bin:/usr/local/php7/bin:/usr/local/git/bin:/usr/bin:/usr/sbin:/usr/local/mysql/bin:/usr/local/bin:~/local/bin:~/local/node/bin:$GOPATH/bin:/usr/local/opt/openssl/bin:$PATH
+export PATH=./bin:~/.composer/vendor/bin:/usr/local/php5/bin:/usr/local/php7/bin:/usr/local/git/bin:/usr/bin:/usr/sbin:/usr/local/mysql/bin:/usr/local/bin:~/local/bin:~/local/node/bin:$GOPATH/bin:/usr/local/opt/openssl/bin:$PATH
 
 # Alias
 alias l="ls -la"
