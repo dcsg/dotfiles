@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ ! -d ".git" ]; then
+    echo "no git repostiory found"
+    exit 0
+fi
+
 branch_name=$(git symbolic-ref -q HEAD)
 branch_name=${branch_name##refs/heads/}
 branch_name=${branch_name:-HEAD}

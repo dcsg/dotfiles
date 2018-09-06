@@ -15,19 +15,6 @@ SAVEHIST=10000
 
 autoload -U zmv
 
-# Alias
-alias l="ls -la"
-alias gt="git log --since=midnight --author='$(git config user.name)' --format='%Cred%h %Cgreen%s %Creset - %ad' --date=relative"
-alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\" PHP_IDE_CONFIG=\"serverName=localhost\" $1"
-alias cat='bat'
-alias ping='prettyping --nolegend'
-alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias top="sudo htop" # alias top and fix high sierra bug
-alias help='tldr'
-alias history='fc -t "$HIST_FORMAT" -il 1'
-alias hist='fc -t "$HIST_FORMAT" -il 1'
-alias gp=gitpull
-
 # my old theme
 #ZSH_THEME="xiong-chiamiov-plus"
 
@@ -85,3 +72,17 @@ source $ZSH/oh-my-zsh.sh
 
 export GOPATH=~/go
 export PATH=~/.composer/vendor/bin:/usr/local/php5/bin:/usr/local/php7/bin:/usr/local/git/bin:/usr/bin:/usr/sbin:/usr/local/mysql/bin:/usr/local/bin:~/local/bin:~/local/node/bin:$GOPATH/bin:/usr/local/opt/openssl/bin:$PATH
+
+# Alias
+alias l="ls -la"
+alias gt="git log --since=midnight --author='$(git config user.name)' --format='%Cred%h %Cgreen%s %Creset - %ad' --date=relative"
+alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\" PHP_IDE_CONFIG=\"serverName=localhost\" $1"
+alias cat='bat'
+alias ping='prettyping --nolegend'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias top="sudo htop" # alias top and fix high sierra bug
+alias help='tldr'
+alias history='fc -t "$HIST_FORMAT" -il 1'
+alias gpull='gitpull'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
