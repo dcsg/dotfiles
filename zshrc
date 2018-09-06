@@ -84,5 +84,6 @@ alias top="sudo htop" # alias top and fix high sierra bug
 alias help='tldr'
 alias history='fc -t "$HIST_FORMAT" -il 1'
 alias gpull='gitpull'
+alias uuid="uuidgen | tr '[:upper:]' '[:lower:]' | tr -d '\n' | pbcopy && pbpaste && echo"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
