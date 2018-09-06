@@ -26,6 +26,7 @@ alias top="sudo htop" # alias top and fix high sierra bug
 alias help='tldr'
 alias history='fc -t "$HIST_FORMAT" -il 1'
 alias hist='fc -t "$HIST_FORMAT" -il 1'
+alias gp=gitpull
 
 # my old theme
 #ZSH_THEME="xiong-chiamiov-plus"
