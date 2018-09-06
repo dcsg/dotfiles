@@ -10,17 +10,17 @@ branch_name=${branch_name##refs/heads/}
 branch_name=${branch_name:-HEAD}
 
 if [ $(git remote -v | grep fetch | wc -l) = "1" ]; then
-    remote = $(git remote -v | grep fetch | awk '{print $1;}')
+    remote=$(git remote -v | grep fetch | awk '{print $1;}')
 else
     PS3='Choose which remote to use: '
     options=($(git remote -v | grep fetch | awk '{print $1;}'))
     select opt in "${options[@]}"; do
         if (printf '%s\n' "${options[@]}" | grep -xq $opt); then
             remote=$opt
-            echo $opt
             break;
         fi
     done
 fi
 
-git fetch --all -p && git merge $remote/$branch_name
+git fetch --all -p
+git merge $remote/$branch_name
